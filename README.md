@@ -2,6 +2,7 @@
 
 ## Table of Contents
 * [Aim](#aim)
+* [Installation](#installation)
 
 ## Aim
 **This Python pipeline allows to perform the following functions in a single step:**
@@ -12,8 +13,15 @@
 - Produce a comprehensive summary output which can be mapped to target sites of interest and used to predict their conservation patterns across the selected species.
 
 ## Installation
-**In order to run the pipeline, a user must have Python programming language installed on their system. The main script can be accessed either through a relevant IDE which supports Python, via Windows/MasOS command line or via Anaconda Prompt**
+**In order to run the pipeline, the user must have Python programming language installed on their system. The main script can be accessed either through a relevant IDE which supports Python, via Windows/MasOS command line or via Anaconda Prompt.**
 
-**A simple and efficient way of accessing Python is by downloading the** [Anaconda Platform](https://pages.github.com/) **which contains multiple relevant IDEs and allows easy installation of any necessary Python modules and libraries.**
+**A simple and efficient way of accessing Python is by downloading the** [Anaconda Platform](https://pages.github.com/) **which contains multiple relevant IDEs and allows effortless installation of any necessary Python modules and libraries.**
 
+**Once Python is installed, the user must ensure that all the modules and libraries used in the pipeline are installed and updated (see the table below)
+
+| Python module/library        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 
 
