@@ -15,7 +15,7 @@
 ## Installation
 ### **Python**
 **In order to run the pipeline, the user must have Python programming language installed on their system. The main script can be accessed either through a relevant IDE which supports Python, via Windows/MasOS command line or via Anaconda Prompt.**
-**A simple and efficient way of accessing Python is by downloading the** [Anaconda Platform](https://pages.github.com/) **which contains multiple relevant IDEs and allows effortless installation of any necessary Python modules and libraries.**
+**A simple and efficient way of accessing Python is by downloading the** [Anaconda Platform](https://www.anaconda.com/products/distribution) **which contains multiple relevant IDEs and allows effortless installation of any necessary Python modules and libraries.**
 
 ### **Python Modules and Libraries**
 **Once Python is installed, the user must ensure that all the modules and libraries used in the pipeline are installed and updated.**
@@ -28,7 +28,7 @@
 | Re            | 2.2.1         | [Re more info](https://docs.python.org/3/library/re.html)   |
 | Pandas        | 1.3.5         | [Pandas more info](https://pandas.pydata.org/)              |
 
-**If [Anaconda](https://pages.github.com/) is available on the system, the user can install all libraries via Anaconda Navigator under *Environments* or via Anaconda Prompt using a relevant installation command for a given module/library.**
+**If [Anaconda](https://www.anaconda.com/products/distribution) is available on the system, the user can install all libraries via Anaconda Navigator under *Environments* or via Anaconda Prompt using a relevant installation command for a given module/library.**
 
 ### **BLAST+**
 **BLAST is used in the pipeline to find protein sequence mathces to each of the searched target proteins. It is required that the user has the standalone version of BLAST, [BLAST+](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download) installed locally on their system (available from the [NIH website](https://blast.ncbi.nlm.nih.gov/Blast.cgi) so that the BLAST step of the pipeline can run successfully. Once installed, BLAST+ should be accessed by the pipeline automatically. However, any issues related to BLAST can be fixed by placing all the files from the downloaded BLAST+ repository into the working directory.**
