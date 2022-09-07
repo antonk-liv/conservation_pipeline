@@ -13,6 +13,7 @@
 
 ## Installation
 **In order to run the pipeline, a user must have Python programming language installed on their system. The main script can be accessed either through a relevant IDE which supports Python, via Windows/MasOS command line or via Anaconda Prompt**
+
 **A simple and efficient way of accessing Python is by downloading the** [Anaconda Platform](https://pages.github.com/) **which contains multiple relevant IDEs and allows easy installation of any necessary Python modules and libraries.**
 
 
