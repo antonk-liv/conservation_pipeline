@@ -13,7 +13,7 @@
 - Produce a comprehensive summary output which can be mapped to target sites of interest and used to predict their conservation patterns across the selected species.
 
 ## Installation
-###### **Python**
+#### **Python**
 **In order to run the pipeline, the user must have Python programming language installed on their system. The main script can be accessed either through a relevant IDE which supports Python, via Windows/MasOS command line or via Anaconda Prompt.**
 
 **A simple and efficient way of accessing Python is by downloading the** [Anaconda Platform](https://pages.github.com/) **which contains multiple relevant IDEs and allows effortless installation of any necessary Python modules and libraries.**
