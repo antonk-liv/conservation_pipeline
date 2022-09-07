@@ -35,7 +35,7 @@ If [Anaconda](https://www.anaconda.com/products/distribution) is available on th
 BLAST is used in the pipeline to find protein sequence mathces to each of the searched target proteins. It is required that the user has the standalone version of BLAST, [BLAST+](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download) installed locally on their system (available from the [NIH website](https://blast.ncbi.nlm.nih.gov/Blast.cgi)) so that the BLAST step of the pipeline can run successfully. Once installed, BLAST+ should be accessed by the pipeline automatically. However, any issues related to BLAST can be fixed by placing all the files from the downloaded BLAST+ repository into the working directory.
 
 ## Inputs and Application
-All the inputs necessary for running the pipeline including the main Python script can be accessed via a [GitHib repository](https://github.com/antonk-liv/conservation_pipeline)
+All the inputs necessary for running the pipeline including the main Python script can be accessed via a [GitHub repository](https://github.com/antonk-liv/conservation_pipeline)
 
 The following eight input files must be placed into the user’s working directory before running the Python conservation pipeline:
 -	**Main Python script** with the pipeline (*conservation_code_run_with_config.py*).
@@ -53,7 +53,7 @@ The user has to then access the configuration file (*configurations.ini*) using 
 - **A most likely substitution of a target amino acid** (*sub* parameter) which may not influence the site function, and which is therefore included into conservation calculation if found instead of a target amino acid within aligned sequences. If no substitution is available, the user must enter any amino acid other than the target amino acid and ignore any columns in the output referring to the substitution.
 - **E-value of the BLASTp search** (*eval_thres parameter*). Any resulting BLAST hits equal to or less than the specified E-value threshold are accepted by the pipeline.
 
-Once the parameters are specified and the configuration file is saved, the user can then run the conservation pipeline via command line and calling the main script, making sure that the location of the working directory containing all the necessary inputs is specified.
+Once the parameters are specified and the configuration file is saved, the user can then run the conservation pipeline via command line by calling the main script, making sure that the location of the working directory containing all the necessary inputs is specified.
 
 
 
