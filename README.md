@@ -3,7 +3,7 @@
 ## Table of Contents
 * [Aim](#aim)
 * [Installation](#installation)
-* [Inputs and Application](#inputs_and_application)
+* [Inputs and Application](#inputs-and-application)
 
 ## Aim
 This Python pipeline allows to perform the following functions in a single step:
