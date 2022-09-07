@@ -17,7 +17,7 @@
 
 **A simple and efficient way of accessing Python is by downloading the** [Anaconda Platform](https://pages.github.com/) **which contains multiple relevant IDEs and allows effortless installation of any necessary Python modules and libraries.**
 
-**Once Python is installed, the user must ensure that all the modules and libraries used in the pipeline are installed and updated (see the table below).**
+**Once Python is installed, the user must ensure that all the modules and libraries used in the pipeline are installed and updated.**
 
 | Python module/library | Version used | Installation and more info |
 | ------------- |:-------------:| -----------------------------------------------------------:|
@@ -27,3 +27,4 @@
 | Re            | 2.2.1         | [Re more info](https://docs.python.org/3/library/re.html)   |
 | Pandas        | 1.3.5         | [Pandas more info](https://pandas.pydata.org/)              |
 
+**If Anaconda is available, the user can install all libraries via Anaconda Navigator under * *Environments* * or via Anaconda Prompt using a relevant installation command for a given module/library.**
