@@ -20,10 +20,10 @@
 **Once Python is installed, the user must ensure that all the modules and libraries used in the pipeline are installed and updated (see the table below).**
 
 | Python module/library | Version used | Installation and more info |
-| ------------- |:-------------:| -----:|
-| Numpy      | 1.21.5 | $1600 |
-| BioPython      | 1.74      |   $12 |
-| CSV | 1.0      |    $1 
-| Re | 2.2.1      |    $1 
-| Pandas | 1.3.5      |    $1 
+| ------------- |:-------------:| -----------------------------------------------------------:|
+| Numpy         | 1.21.5        | [Numpy more info](https://numpy.org/)                       |
+| BioPython     | 1.74          | [BioPython](https://biopython.org/)                         |
+| CSV           | 1.0           | [CSV more info](https://docs.python.org/3/library/csv.html) |
+| Re            | 2.2.1         | [Re more info](https://docs.python.org/3/library/re.html)   |
+| Pandas        | 1.3.5         | [Pandas more info](https://pandas.pydata.org/)              |
 
