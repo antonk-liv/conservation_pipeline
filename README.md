@@ -32,3 +32,25 @@
 
 ### **BLAST+**
 **BLAST is used in the pipeline to find protein sequence mathces to each of the searched target proteins. It is required that the user has the standalone version of BLAST, [BLAST+](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download) installed locally on their system (available from the [NIH website](https://blast.ncbi.nlm.nih.gov/Blast.cgi)) so that the BLAST step of the pipeline can run successfully. Once installed, BLAST+ should be accessed by the pipeline automatically. However, any issues related to BLAST can be fixed by placing all the files from the downloaded BLAST+ repository into the working directory.**
+
+## Application and Inputs
+All the inputs necessary for running the pipeline including the main Python script can be accessed via a [GitHib repository](https://github.com/antonk-liv/conservation_pipeline)
+
+The following eight input files must be placed into the user’s working directory before running the Python conservation pipeline:
+-	Main Python script with the pipeline (*conservation_code_run_with_config.py*).
+-	Configuration file with user-specified settings (*configurations.ini*).
+-	Linker Python file (*link_to_config.py*) which connects the main conservation code with the configuration file. 
+-	User-prepared file *targets.fasta* with FASTA sequences of target proteins containing the sites of interest.
+-	User-prepared file *proteomes.fasta* with complete reference proteomes of target species (including the origin species of the target proteins) in FASTA format across which the conservation of target sites would be assessed.
+-	MUSCLE executable file (*muscle.exe*).
+-	Dictionary file *Mapped_Uniprot_Species_Names.tsv* containing UniProt codes for all available species as well as their common and scientific names.
+-	User-prepared CSV file *sites.csv* which must contain UniProt accession numbers of target protein sequences in the first column and positions of the sites of interest in the second column.
+
+The user has to then access the configuration file (*configurations.ini*) using any appropriate text editor and specify the following parameters for the conservation pipeline:
+- Origin species of the target protein sequences (*species_of_targets* parameter). The species name must be entered using a relevant UniProt species code (if the species code is unknown, the user would refer to the UniProt database or search the pre-processed dictionary input *Mapped_Uniprot_Species_Names.tsv*).
+- Amino acid identity of target sites (*target_amino_acid* parameter) using single-letter amino acid code. The pipeline calculates the conservation of a target amino acid at each of its positions within every query protein sequence.
+- A most likely substitution of a target amino acid (*sub* parameter) which may not influence the site function, and which is therefore included into conservation calculation if found instead of a target amino acid within aligned sequences. If no substitution is available, the user must enter any amino acid other than the target amino acid and ignore any columns in the output referring to the substitution.
+- E-value of the BLASTp search (*eval_thres parameter*). Any resulting BLAST hits equal to or less than the specified E-value threshold are accepted by the pipeline.
+Once the parameters are specified and the configuration file is saved, the user can then run the conservation pipeline either by using a relevant Python IDE or through command line, making sure that the location of the working directory containing all the necessary inputs is specified.
+
+
