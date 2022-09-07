@@ -41,11 +41,20 @@ The following eight input files must be placed into the user’s working directo
 -	**Main Python script** with the pipeline (*conservation_code_run_with_config.py*).
 -	**Configuration file** with user-specified settings (*configurations.ini*).
 -	**Linker Python file** (*link_to_config.py*) which connects the main conservation code with the configuration file. 
--	User-prepared file *targets.fasta* with **FASTA sequences of target proteins** containing the sites of interest.
--	User-prepared file *proteomes.fasta* with **complete reference proteomes of target species** (including the origin species of the target proteins) in FASTA format across which the conservation of target sites would be assessed.
--	**MUSCLE executable file (*muscle.exe*).**
+-	User-prepared file *targets.fasta* with **FASTA sequences of target proteins** containing the sites of interest. The sequences of protein targets can be searched and downloaded in FASTA format from UniProt.
+-	User-prepared file *proteomes.fasta* with **complete reference proteomes of target species** (including the origin species of the target proteins) in FASTA format across which the conservation of target sites would be assessed. The proteomes can be downloaded from UniProt.
+-	**MUSCLE executable file (*muscle.exe*).** The file is available in the GitHub directory but can also be downloaded from the [MUSCLE website](https://drive5.com/muscle/).
 -	**Dictionary file** *Mapped_Uniprot_Species_Names.tsv* containing UniProt codes for all available species as well as their common and scientific names.
 -	User-prepared CSV file *sites.csv* with **sites of interest** which must contain UniProt accession numbers of target protein sequences in the first column and positions of the sites of interest in the second column (see layout below).
+
+| Protein | Site |
+| ----    |:---: |
+| A1A4V9  | 142  |
+| A1A4V9  | 328  | 
+| A1A4Y4  | 42   | 
+| A6NIE6  | 153  | 
+| O60361  | 29   | 
+| O60361  | 110  |
 
 The user has to then access the configuration file (*configurations.ini*) using any appropriate text editor and specify the following parameters for the conservation pipeline:
 - **Origin species of the target protein sequences** (*species_of_targets* parameter). The species name must be entered using a relevant UniProt species code (if the species code is unknown, the user would refer to the UniProt database or search the pre-processed dictionary input *Mapped_Uniprot_Species_Names.tsv*).
@@ -53,8 +62,8 @@ The user has to then access the configuration file (*configurations.ini*) using 
 - **A most likely substitution of a target amino acid** (*sub* parameter) which may not influence the site function, and which is therefore included into conservation calculation if found instead of a target amino acid within aligned sequences. If no substitution is available, the user must enter any amino acid other than the target amino acid and ignore any columns in the output referring to the substitution.
 - **E-value of the BLASTp search** (*eval_thres parameter*). Any resulting BLAST hits equal to or less than the specified E-value threshold are accepted by the pipeline.
 
-Once the parameters are specified and the configuration file is saved, the user can then run the conservation pipeline via command line by calling the main script, making sure that the location of the working directory containing all the necessary inputs is specified. 
-- Location can be specified using cd command in command line, for example, *cd D:\Work\my_working_directory*
+Once the parameters are specified and the configuration file is saved, the user can then run the conservation pipeline via a standard command prompt or Anaconda Prompt by calling the main script and making sure that the location of the working directory containing all the necessary inputs is specified. 
+- Location of working directory can be specified using cd command in command line, for example, *cd D:\Work\my_working_directory*
 - Python script can be called using python command, for example, *python conservation_code_run_with_config.py*
 
-It is also possible to run the script directly without using the configuration file. In this case, the user can run another version of the script *conservation_code_run_without_config.py* and run it via a relevant Python IDE.
+It is also possible to run the script directly without using the configuration file. In this case, the user can run another version of the script *conservation_code_run_without_config.py* directly using a relevant Python IDE.
