@@ -53,8 +53,8 @@ The user has to then access the configuration file (*configurations.ini*) using 
 - **A most likely substitution of a target amino acid** (*sub* parameter) which may not influence the site function, and which is therefore included into conservation calculation if found instead of a target amino acid within aligned sequences. If no substitution is available, the user must enter any amino acid other than the target amino acid and ignore any columns in the output referring to the substitution.
 - **E-value of the BLASTp search** (*eval_thres parameter*). Any resulting BLAST hits equal to or less than the specified E-value threshold are accepted by the pipeline.
 
-Once the parameters are specified and the configuration file is saved, the user can then run the conservation pipeline via command line by calling the main script, making sure that the location of the working directory containing all the necessary inputs is specified.
+Once the parameters are specified and the configuration file is saved, the user can then run the conservation pipeline via command line by calling the main script, making sure that the location of the working directory containing all the necessary inputs is specified. 
+- Location can be specified using cd command in command line, for example, *cd D:\Work\my_working_directory*
+- Once the working directory is specified, Python script can be called using python command, for example, *python conservation_code_run_with_config.py*
 
-
-
-
+It is also possible to run the script directly without using the configuration file. In this case, the user can run another version of the script *conservation_code_run_without_config.py* and run it via a relevant Python IDE.
