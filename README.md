@@ -17,11 +17,13 @@
 
 **A simple and efficient way of accessing Python is by downloading the** [Anaconda Platform](https://pages.github.com/) **which contains multiple relevant IDEs and allows effortless installation of any necessary Python modules and libraries.**
 
-**Once Python is installed, the user must ensure that all the modules and libraries used in the pipeline are installed and updated (see the table below)
+**Once Python is installed, the user must ensure that all the modules and libraries used in the pipeline are installed and updated (see the table below).**
 
-| Python module/library        | Are           | Cool  |
+| Python module/library | Version used | Installation and more info |
 | ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 
+| Numpy      | 1.21.5 | $1600 |
+| BioPython      | 1.74      |   $12 |
+| CSV | 1.0      |    $1 
+| Re | 2.2.1      |    $1 
+| Pandas | 1.3.5      |    $1 
 
