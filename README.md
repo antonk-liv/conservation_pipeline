@@ -1,5 +1,5 @@
 # Computational Pipeline for Predicting Amino Acid Conservation Across Multiple Species
-** The Python pipeline was optimised to perform the following functions in a single step:
+**The Python pipeline was optimised to perform the following functions in a single step:**
 - Search multiple query sequences against reference proteomes of selected species.
 - For each query sequence, extract a top matched protein sequence from each species.
 - Generate multiple sequence alignments between each query sequence and its matches.
