@@ -98,10 +98,17 @@ The outputs containing conservation data have the following columns:
 | Position in target protein  | Position of target site in its protein sequence  | 
 | No. of species analysed | Total number of proteomes across which conservation is determined. This number excludes the origin species of target proteins | 
 | %Conservation out of total no. of proteomes | Percentage conservation score calculated out of total number of analysed species. For example, if there were 100 species of interest and the target site is conserved in 20 of them, then % conservation is 20% |
-| %Conservation out of total no. of proteomes inc. substitutions  | This score takes into account the substitutions of a target amino acid when calculating the score. For example, if the target site is Ser, any conserved Ser and its most likely substitution, Thr, would be added to the numerator of a percentage calculation  | 
+| %Conservation out of total no. of proteomes inc. substitutions  | This score takes into account the substitutions of a target amino acid when calculating the score. For example, if the target site is Ser, any conserved Ser and its most likely substitution, Thr, would be added to the numerator of a % conservation calculation  | 
 | %Conservation in aligned hits  | The conservation score is calculated out of the number of aligned top protein hits from each species (i.e. the number of sequences in alignment minus 1), rather than out of the total number of target species. For example, if out of 100 target species, the alignments were made with hits from 60 species, then the denominator in the % conservation calculation would be 60 | 
 | %Conservation in aligned hits inc. substitutions  | Conservation score out of the number of found hits, also taking a substitution mutation of a target amino acid into account. This means that for the % conservation calculation, numerator would be the number of conserved amino acids at a position in an aligment plus the number of likely substitutions at that position; the denominator would be the number of sequences in the alignment miunus 1 | 
 | No. of species aligned  | Number of target species from which a protein was matched and aligned with the target protein  | 
+| Species aligned (UP codes)  | Names of aligned species given as UniProt species codes  | 
+| Species aligned (common or sci names)  |  Names of aligned species given as their common or scientific names  | 
+| Position in target protein  | Position of target site in its protein sequence  | 
+| Position in target protein  | Position of target site in its protein sequence  | 
+| Position in target protein  | Position of target site in its protein sequence  | 
+| Position in target protein  | Position of target site in its protein sequence  | 
+| Position in target protein  | Position of target site in its protein sequence  | 
 | Position in target protein  | Position of target site in its protein sequence  | 
 | Position in target protein  | Position of target site in its protein sequence  | 
 | Position in target protein  | Position of target site in its protein sequence  | 
