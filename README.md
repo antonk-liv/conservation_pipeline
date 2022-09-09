@@ -89,12 +89,19 @@ Our conservation pipeline was optimised to process as many target proteins as po
 Those targets are identified and summarised in the output file *targets_not_analysed.csv*.
 
 ### **Column meanings in the main conservation outputs**
-The outputs containing conservation data for the target sites and for all target amino acids have the following columns:
+The outputs containing conservation data have the following columns:
 | Column header | Explanation |
 | ----    |:---: |
 | Protein | UniProt Accession ID of a target protein |
-| Peptide sequence from alignment  | Sequence of 15 amino acid containing a target site. The site is located in the middle of the sequence if -7 and +7 amino acids are available | 
-| A1A4Y4  | 42   | 
-| A6NIE6  | 153  | 
-| O60361  | 29   | 
-| O60361  | 110  |
+| Peptide sequence from alignment  | Sequence of 15 amino acids containing a target site. The site is located in the middle of the sequence if -7 and +7 amino acids are available | 
+| Position in alignment  | Position of target site in a multiple sequence alignment of its encompassing protein | 
+| Position in target protein  | Position of target site in its protein sequence  | 
+| No. of species analysed | Total number of proteomes across which conservation is determined. This number excludes the origin species of target proteins | 
+| %Conservation out of total no. of proteomes | Percentage conservation score calculated out of total number of analysed species. For example, if there were 100 species of interest and the target site is conserved in 20 of them, then % conservation is 20% |
+| %Conservation out of total no. of proteomes inc. substitutions  | This score takes into account the substitutions of a target amino acid when calculating the score. For example, if the target site is Ser, any conserved Ser and its most likely substitution, Thr, would be added to the numerator of a percentage calculation  | 
+| %Conservation in aligned hits  | The conservation score is calculated out of the number of aligned top protein hits from each species (i.e. the number of sequences in alignment minus 1), rather than out of the total number of target species. For example, if out of 100 target species, the alignments were made with hits from 60 species, then the denominator in the % conservation calculation would be 60 | 
+| %Conservation in aligned hits inc. substitutions  | Conservation score out of the number of found hits, also taking a substitution mutation of a target amino acid into account. This means that for the % conservation calculation, numerator would be the number of conserved amino acids at a position in an aligment plus the number of likely substitutions at that position; the denominator would be the number of sequences in the alignment miunus 1 | 
+| No. of species aligned  | Number of target species from which a protein was matched and aligned with the target protein  | 
+| Position in target protein  | Position of target site in its protein sequence  | 
+| Position in target protein  | Position of target site in its protein sequence  | 
+| Position in target protein  | Position of target site in its protein sequence  | 
