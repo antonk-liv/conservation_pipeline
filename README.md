@@ -87,3 +87,14 @@ Our conservation pipeline was optimised to process as many target proteins as po
 - A target protein does not have a target amino acid in its sequence.
 
 Those targets are identified and summarised in the output file *targets_not_analysed.csv*.
+
+### **Column meanings in the main conservation outputs**
+The outputs containing conservation data for the target sites and for all target amino acids have the following columns:
+| Column header | Explanation |
+| ----    |:---: |
+| Protein | UniProt Accession ID of a target protein |
+| Peptide sequence from alignment  | Sequence of 15 amino acid containing a target site. The site is located in the middle of the sequence if -7 and +7 amino acids are available | 
+| A1A4Y4  | 42   | 
+| A6NIE6  | 153  | 
+| O60361  | 29   | 
+| O60361  | 110  |
