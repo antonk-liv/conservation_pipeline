@@ -5,6 +5,7 @@
 * [Installation](#installation)
 * [Inputs and Application](#inputs-and-application)
 * [Outputs](#outputs)
+* [Troubleshooting](#troubleshooting)
 * [Examples](#examples)
 * [Contact](#contact)
 
@@ -35,7 +36,7 @@ Once Python is installed, the user must ensure that all the modules and librarie
 If [Anaconda](https://www.anaconda.com/products/distribution) is available on the system, the user can install all libraries via Anaconda Navigator under *Environments* or via Anaconda Prompt using a relevant installation command for a given module/library.
 
 ### **BLAST+**
-BLAST is used in the pipeline to find protein sequence mathces to each of the searched target proteins. It is required that the user has the standalone version of BLAST, [BLAST+](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download) installed locally on their system (available from the [NIH website](https://blast.ncbi.nlm.nih.gov/Blast.cgi)) so that the BLAST step of the pipeline can run successfully. Once installed, BLAST+ should be accessed by the pipeline automatically. However, any issues related to BLAST can be fixed by placing all the files from the downloaded BLAST+ repository into the working directory.
+BLAST is used in the pipeline to find protein sequence matches to each of the searched target proteins. It is required that the user has the standalone version of BLAST, [BLAST+](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download) installed locally on their system (available from the [NIH website](https://blast.ncbi.nlm.nih.gov/Blast.cgi)) so that the BLAST step of the pipeline can run successfully. Once installed, BLAST+ should be accessed by the pipeline automatically. However, any issues related to BLAST can be fixed by placing all the files from the downloaded BLAST+ repository into the working directory.
 
 ## Inputs and Application
 All the inputs necessary for running the pipeline including the main Python script can be accessed via a [GitHub repository](https://github.com/antonk-liv/conservation_pipeline)
@@ -118,6 +119,10 @@ The outputs containing conservation data present conservation scores in differen
 | +1 site position in aln.  | Position of the +1 amino acid in alignment  | 
 | %Conservation of -1 site in aligned hits  | Conservation of the -1 site across aligned sequences (not the total number of target species) | 
 | %Conservation of +1 site in aligned hits  | Conservation of the +1 site across aligned sequences (not the total number of target species) |
+
+## Troubleshooting
+- Any issues related to BLAST (for example, blast not found) can be fixed by placing all the files from the downloaded BLAST+ repository into the working directory.
+- If in the final conservation output with target sites, the positions of target sites are not found or not matched (presented by dash (-)), this means that the target sequence might be different to the one in the reference proteome for that species, even though the IDs are the same. This happens because UniProt sometimes updates the sequences and selects different isoforms as canonical. The ID of a canonical sequence remains the same.
 
 ## Examples
 Examples of actual inputs can be found [HERE](https://drive.google.com/drive/folders/18kNrndCI8Ou6K43s-v4nl3uNAalMSj5c?usp=sharing)
