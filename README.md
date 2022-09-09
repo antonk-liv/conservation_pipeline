@@ -113,3 +113,7 @@ The outputs containing conservation data present conservation scores in differen
 | +1 site position in aln.  | Position of the +1 amino acid in alignment  | 
 | %Conservation of -1 site in aligned hits  | Conservation of the -1 site across aligned sequences (not the total number of target species) | 
 | %Conservation of +1 site in aligned hits  | Conservation of the +1 site across aligned sequences (not the total number of target species) |
+
+## Examples
+Examples of actual inputs can be found [HERE](https://www.anaconda.com/products/distribution](https://drive.google.com/drive/folders/18kNrndCI8Ou6K43s-v4nl3uNAalMSj5c?usp=sharing)
+Example outputs can be found [HERE](https://drive.google.com/drive/folders/1LyRarGg6iftCoF6Tl8ZwozHLRqH2ORBz?usp=sharing)
