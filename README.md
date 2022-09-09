@@ -66,4 +66,4 @@ Once the parameters are specified and the configuration file is saved, the user 
 - Location of working directory can be specified using cd command in command line, for example, *cd D:\Work\my_working_directory*
 - Python script can be called using python command, for example, *python conservation_code_run_with_config.py*
 
-It is also possible to run the script directly without using the configuration file. In this case, the user can run another version of the script *conservation_code_run_without_config.py* directly using a relevant Python IDE.
+It is also possible to run the script directly without using the configuration file. In this case, the user can run another version of the script *conservation_code_run_without_config.py* directly using a relevant Python IDE. However, in that case the user would have to specify origin species of target proteins, target amino acid, likely substitution of the target amino acid and BLAST E-value threshold in lines 20-23 of the script.
