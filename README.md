@@ -89,7 +89,7 @@ Our conservation pipeline was optimised to process as many target proteins as po
 Those targets are identified and summarised in the output file *targets_not_analysed.csv*.
 
 ### **Column meanings in the main conservation outputs**
-The outputs containing conservation data have the following columns:
+The outputs containing conservation data present conservation scores in different ways and have the following columns:
 | Column header | Explanation |
 | ----    |:---: |
 | Protein | UniProt Accession ID of a target protein |
@@ -104,11 +104,12 @@ The outputs containing conservation data have the following columns:
 | No. of species aligned  | Number of target species from which a protein was matched and aligned with the target protein  | 
 | Species aligned (UP codes)  | Names of aligned species given as UniProt species codes  | 
 | Species aligned (common or sci names)  |  Names of aligned species given as their common or scientific names  | 
-| Position in target protein  | Position of target site in its protein sequence  | 
-| Position in target protein  | Position of target site in its protein sequence  | 
-| Position in target protein  | Position of target site in its protein sequence  | 
-| Position in target protein  | Position of target site in its protein sequence  | 
-| Position in target protein  | Position of target site in its protein sequence  | 
-| Position in target protein  | Position of target site in its protein sequence  | 
-| Position in target protein  | Position of target site in its protein sequence  | 
-| Position in target protein  | Position of target site in its protein sequence  | 
+| No. of species aligned excl. gaps  | Total number of species aligned per site but only counting the species where there is no gap at a site position  | 
+| %Conservation in aligned hits excl. gaps  | Conservation score out of aligned species which do not have a gap at a site position   | 
+| %Conservation in aligned hits excl. gaps inc. substitutions  | Conservation score out of aligned species which do not have a gap at a site position, but also taking substitutions of a target amino acid into account and adding them to the numerator in % conservation calculation if conserved at a site position  | 
+| -1 site  | Amino acid at a minus one position from the target amino acid in protein sequence  | 
+| +1 site  | Amino acid at a plus one position from the target amino acid in protein sequence  | 
+| -1 site position in aln.  | Position of the -1 amino acid in alignment  | 
+| +1 site position in aln.  | Position of the +1 amino acid in alignment  | 
+| %Conservation of -1 site in aligned hits  | Conservation of the -1 site across aligned sequences (not the total number of target species) | 
+| %Conservation of +1 site in aligned hits  | Conservation of the +1 site across aligned sequences (not the total number of target species) |
