@@ -5,6 +5,8 @@
 * [Installation](#installation)
 * [Inputs and Application](#inputs-and-application)
 * [Outputs](#outputs)
+* [Examples](#examples)
+* [Contact](#contact)
 
 ## Aim
 This Python pipeline allows to perform the following functions in a single step:
@@ -74,6 +76,9 @@ It is also possible to run the script directly without using the configuration f
 Once the pipeline is run, all outputs are summarised in a newly generated folder called "ALL_OUTPUTS" where the user can find the following results:
 - **Folder *Alignments_per_target*** which contains multiple sequence alignments between each protein target and its top hits in aligned FASTA (.afa) format. The alignments can be viewed directly by using relevant software such as JalView.
 - **Folder *FASTA_sequences_of_top_hits_per_target*** which, for each target protein, contains its sequence in FASTA format and the sequences of its top hits.
+- **Folder *Top_BLAST_hits_per_target*** which contains top BLAST hits from each species for each protein target.
+- **File *alltophits.csv*** containing top BLAST hits from each species for each protein (as a single file).
+- **File *blast_result_file*** containing overall raw BLAST results from BLAST+.
 - **File *Conservation_of_target_sites.csv*** which contains summary conservation data for the target amino acid sites of interest from target proteins.
 - **File *X_conservation_in_TARGET_SPECIES.csv*** where X is the target amino acid and TARGET_SPECIES is the species code of the origin species from which the targets came from. This is a summary file containing conservation data for every target amino acid in each target protein.
 - **File *targets_not_analysed.csv*** containing protein targets which were not analysed and the reasons for their exclusion (see below for more details).
@@ -115,5 +120,8 @@ The outputs containing conservation data present conservation scores in differen
 | %Conservation of +1 site in aligned hits  | Conservation of the +1 site across aligned sequences (not the total number of target species) |
 
 ## Examples
-Examples of actual inputs can be found [HERE](https://www.anaconda.com/products/distribution](https://drive.google.com/drive/folders/18kNrndCI8Ou6K43s-v4nl3uNAalMSj5c?usp=sharing)
+Examples of actual inputs can be found [HERE](https://drive.google.com/drive/folders/18kNrndCI8Ou6K43s-v4nl3uNAalMSj5c?usp=sharing)
 Example outputs can be found [HERE](https://drive.google.com/drive/folders/1LyRarGg6iftCoF6Tl8ZwozHLRqH2ORBz?usp=sharing)
+
+## Contact
+If you have any questions or suggestions about the conservation pipeline, feel free to contact Anton Kalyuzhnyy at A.Kalyuzhnyy@liverpool.ac.uk
