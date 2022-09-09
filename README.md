@@ -17,7 +17,7 @@ This Python pipeline allows to perform the following functions in a single step:
 ## Installation
 ### **Python**
 In order to run the pipeline, the user must have Python programming language installed on their system. The main script can be accessed either through a relevant IDE which supports Python, via Windows/MasOS command line or via Anaconda Prompt.
-A simple and efficient way of accessing Python is by downloading the** [Anaconda Platform](https://www.anaconda.com/products/distribution) **which contains multiple relevant IDEs and allows effortless installation of any necessary Python modules and libraries.
+A simple and efficient way of accessing Python is by downloading the **[Anaconda Platform](https://www.anaconda.com/products/distribution)** which contains multiple relevant IDEs and allows effortless installation of any necessary Python modules and libraries.
 
 ### **Python Modules and Libraries**
 Once Python is installed, the user must ensure that all the modules and libraries used in the pipeline are installed and updated.
@@ -73,10 +73,17 @@ It is also possible to run the script directly without using the configuration f
 ### **Main output files**
 Once the pipeline is run, all outputs are summarised in a newly generated folder called "ALL_OUTPUTS" where the user can find the following results:
 - **Folder *Alignments_per_target*** which contains multiple sequence alignments between each protein target and its top hits in aligned FASTA (.afa) format. The alignments can be viewed directly by using relevant software such as JalView.
-- **Folder *FASTA_sequences_of_top_hits_per_target*** which, for each target protein, contains its sequence in FASTA format and the sequence of its top hits.
+- **Folder *FASTA_sequences_of_top_hits_per_target*** which, for each target protein, contains its sequence in FASTA format and the sequences of its top hits.
 - **File *Conservation_of_target_sites.csv*** which contains summary conservation data for the target amino acid sites of interest from target proteins.
 - **File *X_conservation_in_TARGET_SPECIES.csv*** where X is the target amino acid and TARGET_SPECIES is the species code of the origin species from which the targets came from. This is a summary file containing conservation data for every target amino acid in each target protein.
 - **File *targets_not_analysed.csv*** containing protein targets which were not analysed and the reasons for their exclusion (see below for more details).
 
 ### **Protein targets which were excluded from the analysis and the reasons for their exclusion**
 Our conservation pipeline was optimised to process as many target proteins as possible. However, some targets cannot be analysed by the pipeline due to one of the following reasons:
+- A target produces no hits in a BLAST search at all, likely due to its sequence being too short or poorly annotated.
+- A target produces no significant hits in a BLAST search that meet the set E-value threshold, likely due its sequence being unique to its origin species.
+- A target is not found in the reference proteome of its origin species, likely due to poor sequence annotation or because the target is an isoform of a canonical protein from a reference proteome. This is detected when an identical match to the query protein is not found in a BLAST search when searched against the reference proteome of its origin species.
+- Multiple sequence alignments are not generated between the target sequence and its top hits. This is likely to happen when very large sequences of >30,000 base pairs are being aligned.
+- A target protein does not have a target amino acid in its sequence.
+
+Those targets are identified and summarised in the output file *targets_not_analysed.csv*.
