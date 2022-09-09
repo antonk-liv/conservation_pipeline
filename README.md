@@ -7,6 +7,7 @@
 * [Outputs](#outputs)
 * [Troubleshooting](#troubleshooting)
 * [Examples](#examples)
+* [Further Analysis](#further-analysis)
 * [Contact](#contact)
 
 ## Aim
@@ -19,7 +20,7 @@ This Python pipeline allows to perform the following functions in a single step:
 
 ## Installation
 ### **Python**
-In order to run the pipeline, the user must have Python programming language installed on their system. The main script can be accessed either through a relevant IDE which supports Python, via Windows/MasOS command line or via Anaconda Prompt.
+In order to run the pipeline, the user must have Python programming language installed on their system. The main script can be accessed either through a relevant IDE which supports Python, via Windows/MacOS command line or via Anaconda Prompt.
 A simple and efficient way of accessing Python is by downloading the **[Anaconda Platform](https://www.anaconda.com/products/distribution)** which contains multiple relevant IDEs and allows effortless installation of any necessary Python modules and libraries.
 
 ### **Python Modules and Libraries**
@@ -106,7 +107,7 @@ The outputs containing conservation data present conservation scores in differen
 | %Conservation out of total no. of proteomes | Percentage conservation score calculated out of total number of analysed species. For example, if there were 100 species of interest and the target site is conserved in 20 of them, then % conservation is 20% |
 | %Conservation out of total no. of proteomes inc. substitutions  | This score takes into account the substitutions of a target amino acid when calculating the score. For example, if the target site is Ser, any conserved Ser and its most likely substitution, Thr, would be added to the numerator of a % conservation calculation  | 
 | %Conservation in aligned hits  | The conservation score is calculated out of the number of aligned top protein hits from each species (i.e. the number of sequences in alignment minus 1), rather than out of the total number of target species. For example, if out of 100 target species, the alignments were made with hits from 60 species, then the denominator in the % conservation calculation would be 60 | 
-| %Conservation in aligned hits inc. substitutions  | Conservation score out of the number of found hits, also taking a substitution mutation of a target amino acid into account. This means that for the % conservation calculation, numerator would be the number of conserved amino acids at a position in an aligment plus the number of likely substitutions at that position; the denominator would be the number of sequences in the alignment miunus 1 | 
+| %Conservation in aligned hits inc. substitutions  | Conservation score out of the number of found hits, also taking a substitution mutation of a target amino acid into account. This means that for the % conservation calculation, numerator would be the number of conserved amino acids at a position in an alignment plus the number of likely substitutions at that position; the denominator would be the number of sequences in the alignment minus 1 | 
 | No. of species aligned  | Number of target species from which a protein was matched and aligned with the target protein  | 
 | Species aligned (UP codes)  | Names of aligned species given as UniProt species codes  | 
 | Species aligned (common or sci names)  |  Names of aligned species given as their common or scientific names  | 
@@ -128,6 +129,22 @@ The outputs containing conservation data present conservation scores in differen
 Examples of actual inputs can be found [HERE](https://drive.google.com/drive/folders/18kNrndCI8Ou6K43s-v4nl3uNAalMSj5c?usp=sharing)
 
 Example outputs can be found [HERE](https://drive.google.com/drive/folders/1LyRarGg6iftCoF6Tl8ZwozHLRqH2ORBz?usp=sharing)
+
+## Further Analysis
+### **Analysing proteins which are not in the reference proteome of the origin species**
+The pipeline was originally designed to only analyse proteins which are in a reference proteome of their origin species. However, it is possible to analyse protein targets which are not in the reference proteome by making slight adjustments to the *proteomes.fasta* input file:
+- If the user already knows that a protein target is not in the reference proteome of its origin species, then the sequence of that protein target must be added to the *proteomes.fasta* input file before running the code.
+- If the user does not know whether a protein target is in the reference proteome of its origin species, the user should run the code once and analyse output file *targets_not_analysed.csv*. Any protein targets which are not in the reference proteome are written into that file. The user can then extract the IDs of those proteins and create a new *targets.fasta* file containing the sequences of those proteins. Furthermore, those sequences should be added to the *proteomes.fasta* file. The code can then be re-run to analyse proteins which are not in the reference proteome.
+
+### **Analysing additional target amino acids without re-running the full pipeline**
+The pipeline was designed to analyse one amino acid at a time. However, it is possible to analyse additional amino acids after running the main code without having to re-run the full pipeline. A separate code *conservation_code_aln_section_with_config.py* was created to isolate the section of the main code which processes the alignments and generates conservation results. The user can run the code in a similar way as running the main pipeline, but the user has to ensure that all alignments (.afa outputs) and all FASTA files containing the sequences of target proteins and their hits are also included in the working directory. As a result, the user must have the following files in the working directory to run the alignment section of the code:
+- The alignment section of the code itself *conservation_code_aln_section_with_config.py*
+- Configuration file *configurations_aln_file.ini* which contains user-defined settings which must be entered by the user beforehand (Origin species of target sequences using UniProt species code, target amino acid, likely substitution, total number of proteomes excluding the origin species).
+- Linker file *link_to_config_aln.py* which connects the code with the configurations file.
+- Dictionary file *Mapped_Uniprot_Species_Names.tsv* containing UniProt codes for all available species as well as their common and scientific names.
+-	User-prepared CSV file *sites.csv* with sites of interest which must contain UniProt accession numbers of target protein sequences in the first column and positions of the sites of interest in the second column.
+
+As with the main pipeline, another version of the alignment section is available *conservation_code_aln_section_without_config.py* which can be run directly using a Python IDE without interacting with a configurations file. In that case, the user has to enter the parameters within the code itself in lines 23-26.
 
 ## Contact
 If you have any questions or suggestions about the conservation pipeline, feel free to contact Anton Kalyuzhnyy at A.Kalyuzhnyy@liverpool.ac.uk
