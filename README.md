@@ -40,7 +40,7 @@ If [Anaconda](https://www.anaconda.com/products/distribution) is available on th
 BLAST is used in the pipeline to find protein sequence matches to each of the searched target proteins. It is required that the user has the standalone version of BLAST, [BLAST+](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download) installed locally on their system (available from the [NIH website](https://blast.ncbi.nlm.nih.gov/Blast.cgi)) so that the BLAST step of the pipeline can run successfully. Once installed, BLAST+ should be accessed by the pipeline automatically. However, any issues related to BLAST can be fixed by placing all the files from the downloaded BLAST+ repository into the working directory.
 
 ## Inputs and Application
-All the inputs necessary for running the pipeline including the main Python script can be accessed via a [GitHub repository](https://github.com/antonk-liv/conservation_pipeline)
+All the inputs necessary for running the pipeline including the main Python script can be accessed via a [GitHub repository](https://github.com/antonk-liv/conservation_pipeline) or from an [online University of Liverpool server space](https://pgb.liv.ac.uk/~antonk/)
 
 The following eight input files must be placed into the user’s working directory before running the Python conservation pipeline:
 -	**Main Python script** with the pipeline (*conservation_code_run_with_config.py*).
@@ -126,9 +126,7 @@ The outputs containing conservation data present conservation scores in differen
 - If in the final conservation output with target sites, the positions of target sites are not found or not matched (presented by dash (-)), this means that the target sequence might be different to the one in the reference proteome for that species, even though the IDs are the same. This happens because UniProt sometimes updates the sequences and selects different isoforms as canonical. The ID of a canonical sequence remains the same.
 
 ## Examples
-Examples of actual inputs can be found [HERE](https://drive.google.com/drive/folders/18kNrndCI8Ou6K43s-v4nl3uNAalMSj5c?usp=sharing)
-
-Example outputs can be found [HERE](https://drive.google.com/drive/folders/1LyRarGg6iftCoF6Tl8ZwozHLRqH2ORBz?usp=sharing)
+Examples of actual inputs and outputs, as well as sample pipeline runs can be found [HERE](https://pgb.liv.ac.uk/~antonk/)
 
 ## Further Analysis
 ### **Analysing proteins which are not in the reference proteome of the origin species**
